@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}About!{% endblock %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('contactstyles') }}
+{% endblock %}
+
+{% block body %}
+    {% include 'components/header.html.twig' %}
+    <div class="container-fluid background py-5 contact-page">
+        <div class="container aboutcontent h-100">
+            <div class="contact-title">
+                <h1>Over MKB Digiwerkplaats</h1>
+            </div>
+            <hr />
+
+            <p class="lead py-0 py-md-3 aboutcontent text-white"> De wereld verandert in rap tempo, digitalisering is overal in ons leven. Onder invloed van technologische ontwikkeling gaan klanten andere eisen stellen. Digitalisering biedt grote kansen voor ondernemers en kan helpen om beter in te spelen op de veranderende klantvraag: denk aan het efficiënter maken van bedrijfsprocessen; meer klanten bereiken via online sales en marketing en beter weten wat je klanten willen door data te gebruiken.<br>
+<br>
+            Voor veel ondernemers is het echter een grote stap om die kansen te benutten. Gebrek aan tijd, kennis en geld spelen hierbij een rol. Dure ICT-specialisten inschakelen of het eigen personeel bijscholen is geen optie. De MKB Digiwerkplaats wil hier iets aan doen. Bij de werkplaats kunnen ondernemers terecht voor praktische ondersteuning en advies in hun bedrijf. Professional is opleiding gaan samen met ondernemers aan de slag.<br>
+<br>
+            Wie? Door studenten van MBO Rijnland en de Haagse Hogeschool.<br>
+            Waar? In de regio Zoetermeer vanuit de Dutch Innovation Factory. In Den Haag gaan studenten op locatie aan de slag met ondernemers. Bijvoorbeeld in de pop-up werkplaats op bedrijventerrein Zichtenburg, Kerketuinen Dekkershoek.<br>
+<br>
+            Initiatiefnemers en financiering<br>
+                MBO Rijnland, Haagse Hogeschool, gemeente Zoetermeer</p>
+        </div>
+    </div>
+    </div>
+{% endblock %}

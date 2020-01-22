@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block stylesheets %}
+  {{ encore_entry_link_tags('homestyles') }}
+{% endblock %}
+
+{% block body %}
+
+{% include 'components/header.html.twig' %}
+<!-- Full Page Image Header with Vertically Centered Content -->
+<header class="masthead text-white">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+        <div class="row">
+            <div class="col-lg-6 col-12">                                 
+                <h1 class="home-title ont-weight-light header-title">MKB Digiwerkplaats</h1>
+                <p class="lead py-0 py-md-3">Hoe future proof is uw onderneming? Onze studenten zien de digitale kansen, uitdagingen en mogelijkheden voor uw bedrijf waar u (nog) geen weet van hebt. We gaan graag samen met u aan de slag! Bereik meer klanten, werk efficiënter, maak meer winst. Heeft u een concrete vraag of wilt u samen kijken wat er mogelijk is. Meldt u aan!</p>
+                <a href="{{ path('fos_user_registration_register') }}" class="btn rounded-pill headerbutton">Meld u aan</a>
+              </div>
+            <div class="col-lg-6 col-12 mt-0 mt-md-5 mt-lg-0 text-right">
+                <iframe title="vimeo-player" src="https://player.vimeo.com/video/154955979" width="100%" height="450px" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+</header>
+
+<section class="py-0 py-md-5">
+  <div class="container">
+    <div class='row text-center'>
+       <div class='col-12 col-md py-5 p-md-0'>
+            <div class='row px-0 px-md-2'>
+                <div class='col-xl-2 col-12 my-4 my-md-0'><img src="{{ asset('build/images/Vector.png') }}"></div>
+                <div class='col-xl-10 col-12 blurbtitle text-center'>Lorem Ipsum is simply a dummy text
+                  <br/>
+                  <span class="blurbtext">
+                      Contrary to popular belief, Lorem Ipsum is not simply random text.
+                  </span>
+                </div>
+            </div>
+       </div>
+        <div class='col-12 col-md py-5 p-md-0'>
+            <div class='row px-0 px-md-2'>
+                <div class='col-xl-2 col-12 my-4 my-md-0'><img src="{{ asset('build/images/Vector.png') }}"></div>
+                <div class='col-xl-10 col-12 blurbtitle text-center'>Lorem Ipsum is simply a dummy text
+                  <br/>
+                  <span class="blurbtext">
+                      Contrary to popular belief, Lorem Ipsum is not simply random text.
+                  </span>
+                </div>
+            </div>
+       </div>
+       <div class='col-12 col-md py-5 p-md-0'>
+          <div class='row px-0 px-md-2'>
+              <div class='col-xl-2 col-12 my-4 my-md-0'><img src="{{ asset('build/images/Vector.png') }}"></div>
+              <div class='col-xl-10 col-12 blurbtitle text-center'>Lorem Ipsum is simply a dummy text
+                <br/>
+                <span class="blurbtext">
+                    Contrary to popular belief, Lorem Ipsum is not simply random text.
+                </span>
+              </div>
+          </div>
+       </div>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<div class="container-fluid bg-light py-0 py-md-5">
+    <div class="container py-3">
+        <div class="row">
+            <div class="col-lg-6">
+                <iframe title="vimeo-player" src="https://player.vimeo.com/video/154955979" width="100%" height="360" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="col-lg-6 m-0 mt-md-5">
+            <h4 class="subheading">DE OPLOSSING VOOR <br/> JOUW ONDERNEMING</h4>
+            <p class="subtext py-3 py-md-0">Door ICT-onderwijs, onderzoek, overheid  en bedrijven te verbinden in één gebouw ontstaat een broedplaats vol interactie en samenwerking. Zo creëren wij een innovatieve plek waar kennisdeling plaatsvindt, innovaties ontstaan en co-creaties geboren worden. <br/> <br/> Daarmee is de Dutch Innovation Factory een Playground voor digital Innovators geworden. Een warm welkom met onze vraag aan jou “hoe wordt jij een Playground voor digital Innovators.</p>
+            <a href="{{ path('fos_user_registration_register') }}" class="btn rounded-pill headerbutton">Meld u aan.</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt-5 mb-5">
+  <div class="container py-3">
+    <div class="row">
+        <div class="col-md-12 mb-5">
+            <h2 class="text-center font-weight-bold samenwerkingtitle">In samenwerking met</h2>
+          </div>
+          <div class="col col-md-6 col-lg-4 my-4">
+            <a href="#"><img class="d-block ml-auto mr-auto" width="150px" src="{{ asset('build/images/haagselogo.png') }}" ></a>
+          </div>
+          <div class="col col-md-6 col-lg-4 my-4">
+            <a href="#"><img class="d-block ml-auto mr-auto" width="150px" src="{{ asset('build/images/logo.png') }}" ></a>
+          </div>
+          <div class="col col-md-6 col-lg-4 my-4">
+            <a href="#"><img class="d-block ml-auto mr-auto" width="125px" src="{{ asset('build/images/dif_logo-format2.jpg') }}" ></a>
+          </div>
+          <div class="col col-md-6 col-lg-4 my-4">
+            <a href="#"><img class="d-block ml-auto mr-auto" width="150px" src="{{ asset('build/images/zoetermeer.png') }}" ></a>
+          </div>
+          <div class="col col-md-6 col-lg-4 my-4">
+            <a href="#"><img class="d-block ml-auto mr-auto" width="150px" src="{{ asset('build/images/denhaag.jpg') }}" ></a>
+          </div>
+          <div class="col col-md-6 col-lg-4 my-4">
+            <a href="#"><img class="d-block ml-auto mr-auto" width="150px" src="{{ asset('build/images/delft.png') }}" ></a>
+          </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

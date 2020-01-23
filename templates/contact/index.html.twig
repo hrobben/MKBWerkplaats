@@ -3,40 +3,51 @@
 {% block title %}Contact!{% endblock %}
 
 {% block stylesheets %}
-  {{ encore_entry_link_tags('contactstyles') }}
+    {{ encore_entry_link_tags('contactstyles') }}
 {% endblock %}
 
 {% block body %}
 
-{% include 'components/header.html.twig' %}
+    {% include 'components/header.html.twig' %}
 
-<div class="container-fluid background py-5 contact-page">
-    <div class="container contact contact-container h-100">
-        <div class="contact-title">
-            <h1>MKB Digiwerkplaats</h1>
-            <h4>Laten we contact houden.</h4>
-        </div>
-        <hr />
+    <div class="container-fluid background py-5 contact-page">
+        <div class="container contact contact-container h-100">
+            <div class="contact-title">
+                <h1>MKB Digiwerkplaats</h1>
+                <h4>Laten we contact houden.</h4>
+            </div>
+            <hr/>
 
-        <div class="infoWithForm">
-            <div class="contact-info">
-                <div class="">
-                    <p><i class="fas fa-building mr-3"></i> Bleiswijkseweg 37E, 2712 PB Zoetermeer</p>
-                    <p><i class="fas fa-envelope mr-3"></i> <a class='text-white' href='mailto:info@dutchinnovationfactory.nl'>info@dutchinnovationfactory.nl</a></p>
-                    <p><i class="fas fa-phone mr-3"></i><a class='text-white' href='tel:+ 31 6 12345678'> + 31 6 12345678</a></p>
+            <div class="infoWithForm">
+                <div class="contact-info">
+                    <div class="">
+                        <p><i class="fas fa-building mr-3"></i> Bleiswijkseweg 37E, 2712 PB Zoetermeer</p>
+                        <p><i class="fas fa-envelope mr-3"></i> <a class='text-white'
+                                                                   href='mailto:info@dutchinnovationfactory.nl'>info@dutchinnovationfactory.nl</a>
+                        </p>
+                        <p><i class="fas fa-phone mr-3"></i><a class='text-white' href='tel:+ 31 6 12345678'> + 31 6
+                                12345678</a></p>
+                    </div>
+                </div>
+                {% if (our_form is not null) %}
+                <div class="form">
+                    {{ form_start(our_form) }}
+                    {{ form_widget(our_form) }}
+
+                    <input type="submit" value="Send" class="btn btn-success"/>
+
+                    {{ form_end(our_form) }}
                 </div>
             </div>
-            <div class="form">
-                {{ form_start(our_form) }}
-                {{ form_widget(our_form) }}
-          
-                <input type="submit" value="Send" class="btn btn-success" />
-
-                {{ form_end(our_form) }}
+            {% else %}
+                <div class="form text-white">
+                    <h1><br><p>Bedankt voor uw aanvraag!</p><br><br></h1>
                 </div>
-            </div>
+            {% endif %}
         </div>
     </div>
-    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9815.319619785474!2d4.5148634!3d52.0464108!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x13e973bd0ecd70c!2sDutch%20Innovation%20Factory!5e0!3m2!1snl!2snl!4v1576168374580!5m2!1snl!2snl" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    <iframe class="map"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9815.319619785474!2d4.5148634!3d52.0464108!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x13e973bd0ecd70c!2sDutch%20Innovation%20Factory!5e0!3m2!1snl!2snl!4v1576168374580!5m2!1snl!2snl"
+            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     </div>
 {% endblock %}

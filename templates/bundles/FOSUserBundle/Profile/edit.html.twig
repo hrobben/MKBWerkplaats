@@ -1,5 +1,25 @@
-{% extends "@FOSUser/layout.html.twig" %}
+{% extends "base.html.twig" %}
 
-{% block fos_user_content %}
-{% include "@FOSUser/Profile/edit_content.html.twig" %}
-{% endblock fos_user_content %}
+{% block stylesheets %}
+    {{ encore_entry_link_tags('contactstyles') }}
+{% endblock %}
+
+{% block body %}
+
+    {% include 'components/header.html.twig' %}
+
+    <div class="container-fluid background py-5 contact-page">
+        <div class="container contact contact-container h-100">
+            <div class="contact-title">
+                <h1>MKB Digiwerkplaats</h1>
+                <h4>Profiel Edit:</h4>
+            </div>
+            <hr/>
+
+            <div class="infoWithForm">
+
+                {% include "bundles/FOSUserBundle/Profile/edit_content.html.twig" %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

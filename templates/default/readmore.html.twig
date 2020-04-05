@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ReadMore!{% endblock %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('contactstyles') }}
+{% endblock %}
+
+{% block body %}
+    {% include 'components/header.html.twig' %}
+    <div class="container-fluid background py-5 contact-page">
+        <div class="container aboutcontent h-100">
+            <div class="contact-title">
+                <h1>{{ read_more.title }}</h1>
+            </div>
+            <hr />
+
+            <div class="lead py-0 py-md-3 aboutcontent text-white">{{ read_more.content | raw }}</div>
+        </div>
+    </div>
+    </div>
+{% endblock %}

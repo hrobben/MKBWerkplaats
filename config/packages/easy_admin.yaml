@@ -5,3 +5,4 @@ easy_admin:
        - App\Entity\Question
        - App\Entity\QuestionType
        - App\Entity\User
+       - App\Entity\ReadMore

@@ -27,49 +27,31 @@
     </div>
 </div>
 </header>
-
+    {% for Blog in blogs %}
 <section class="py-0 py-md-5">
   <div class="container">
+
+
     <div class='row text-center'>
        <div class='col-12 col-md py-5 p-md-0'>
             <div class='row px-0 px-md-2'>
                 <div class='col-xl-2 col-12 my-4 my-md-0'><img src="{{ asset('build/images/Vector.png') }}"></div>
                 <div class='col-xl-10 col-12 blurbtitle text-center'>
-                    Lorem Ipsum is simply a dummy text
+                    {{ Blog.Title | raw }}
                   <br/>
                   <span class="blurbtext">
-                      Contrary to popular belief, Lorem Ipsum is not simply random text.
+                      {{ Blog.Text | raw }}
+
                   </span>
                 </div>
             </div>
-       </div>
-        <div class='col-12 col-md py-5 p-md-0'>
-            <div class='row px-0 px-md-2'>
-                <div class='col-xl-2 col-12 my-4 my-md-0'><img src="{{ asset('build/images/Vector.png') }}"></div>
-                <div class='col-xl-10 col-12 blurbtitle text-center'>Lorem Ipsum is simply a dummy text
-                  <br/>
-                  <span class="blurbtext">
-                      Contrary to popular belief, Lorem Ipsum is not simply random text.
-                  </span>
-                </div>
-            </div>
-       </div>
-       <div class='col-12 col-md py-5 p-md-0'>
-          <div class='row px-0 px-md-2'>
-              <div class='col-xl-2 col-12 my-4 my-md-0'><img src="{{ asset('build/images/Vector.png') }}"></div>
-              <div class='col-xl-10 col-12 blurbtitle text-center'>Lorem Ipsum is simply a dummy text
-                <br/>
-                <span class="blurbtext">
-                    Contrary to popular belief, Lorem Ipsum is not simply random text.
-                </span>
-              </div>
-          </div>
        </div>
   </div>
+
 </div>
-    </div>
-  </div>
 </section>
+
+    {% endfor %}
 
 <div class="container-fluid bg-light py-0 py-md-5">
     <div class="container py-3">

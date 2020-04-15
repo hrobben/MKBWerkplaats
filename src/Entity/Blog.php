@@ -26,6 +26,11 @@ class Blog
      */
     private $Text;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Samenvatting;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -58,6 +63,18 @@ class Blog
     public function __toString()
     {
         return (string) $this->getTitle();
+    }
+
+    public function getSamenvatting(): ?string
+    {
+        return $this->Samenvatting;
+    }
+
+    public function setSamenvatting(string $Samenvatting): self
+    {
+        $this->Samenvatting = $Samenvatting;
+
+        return $this;
     }
 
 }

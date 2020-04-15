@@ -28,14 +28,14 @@ class Blog
     private $Text;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $Samenvatting;
-
-    /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="text", nullable=false)
      */
     private $created;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $summary;
 
     public function getId(): ?int
     {
@@ -71,19 +71,7 @@ class Blog
     {
         return (string) $this->getTitle();
     }
-
-    public function getSamenvatting(): ?string
-    {
-        return $this->Samenvatting;
-    }
-
-    public function setSamenvatting(string $Samenvatting): self
-    {
-        $this->Samenvatting = $Samenvatting;
-
-        return $this;
-    }
-
+    
     public function getCreated(): ?\DateTimeInterface
     {
         return $this->created;
@@ -93,6 +81,18 @@ class Blog
     {
         $this->created = $created;
         
+
+        return $this;
+    }
+
+    public function getSummary(): ?string
+    {
+        return $this->summary;
+    }
+
+    public function setSummary(?string $summary): self
+    {
+        $this->summary = $summary;
 
         return $this;
     }

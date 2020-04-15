@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -31,6 +32,11 @@ class Blog
      */
     private $Samenvatting;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $created;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -44,6 +50,7 @@ class Blog
     public function setTitle(string $Title): self
     {
         $this->Title = $Title;
+        $this->created = new DateTime('now');
 
         return $this;
     }
@@ -73,6 +80,19 @@ class Blog
     public function setSamenvatting(string $Samenvatting): self
     {
         $this->Samenvatting = $Samenvatting;
+
+        return $this;
+    }
+
+    public function getCreated(): ?\DateTimeInterface
+    {
+        return $this->created;
+    }
+
+    public function setCreated(\DateTimeInterface $created): self
+    {
+        $this->created = $created;
+        
 
         return $this;
     }

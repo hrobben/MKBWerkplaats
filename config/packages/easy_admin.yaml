@@ -18,4 +18,5 @@ easy_admin:
                     fields:
                         - { property: "Title" }
                         - { property: 'Text', type: 'text_editor'}
+                        - { property: "Samenvatting", type: 'text_editor'}
 

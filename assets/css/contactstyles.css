@@ -43,8 +43,14 @@
     margin-top: 15%;
 }
 
+.contact-title>h2{
+    font-size: 52px;
+    margin-top: 15%;
+}
+
 .contact-title>h4{
     font-size: 24px;
+    margin-top: 15%;
 }
 
 hr{

@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ blog.Title | raw }}{% endblock %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('contactstyles') }}
+{% endblock %}
+
+{% block body %}
+    {% include 'components/header.html.twig' %}
+    <div class="container-fluid background py-5 contact-page">
+        <div class="container aboutcontent h-100">
+            <div class="contact-title">
+                <h1>{{  blog.Title | raw }}</h1>
+                </div>
+                <hr />
+                <h6 class="lead py-0 py-md-3 aboutcontent text-white">{{ blog.Text | raw }}</h6>
+                <a href="{{ path('blog_index') }}" class='text-white'>Terug naar overview</a>
+        </div>
+    </div>
+
+{% endblock %}

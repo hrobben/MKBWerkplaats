@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Blog;
-use App\Form\BlogType;
+use App\Form\Blog1Type;
 use App\Repository\BlogRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -24,16 +24,17 @@ class BlogController extends AbstractController
             'blogs' => $blogRepository->findAll(),
         ]);
     }
-    public function repositoryAction() {
-
-        $em = $this->getDoctrine()->getManager();
-        $blog = $em->getRepository('AppBundle:Blog');
 
 
-
-        return $this->render('dashboard/base.html.twig',array('blogs'=>$blog));
-
-
+    /**
+     * @Route("/{id}", name="blog_show", methods={"GET"})
+     */
+    public function show(Blog $blog): Response
+    {
+        return $this->render('blog/show.html.twig', [
+            'blog' => $blog,
+        ]);
     }
+
 
 }

@@ -40,9 +40,9 @@
                     {{ Blog.Title | raw }}
                   <br/>
                   <span class="blurbtext">
-                      {{ Blog.Text | raw }}
-
+                      {{ Blog.summary | raw }}
                   </span>
+                    <a href="{{ path('blog_show', {'id': Blog.id}) }}" class="btn rounded-pill headerbutton">Lees verder</a>
                 </div>
             </div>
        </div>

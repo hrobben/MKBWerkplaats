@@ -16,8 +16,8 @@
         <tbody>
         {% for blog in blogs %}
             <tr style="color:white;">
-                <td><h5>{{ blog.Title | raw }}</h5></td>
-                <td>{{ blog.Samenvatting | raw }}</td>
+                <td><h5>{{ blog.title | raw }}</h5></td>
+                <td>{{ blog.summary | raw }}</td>
                 <td>
                     <a href="{{ path('blog_show', {'id': blog.id}) }}">Lees het bericht</a>
                 </td>

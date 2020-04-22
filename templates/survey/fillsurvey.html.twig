@@ -9,7 +9,6 @@
 {% block body %}
 
     {% include 'components/header.html.twig' %}
-    {% set Value = "" %}
     {#
         <div class="container-fluid" style="height: 100%;">
             <div class="row displayMobile d-flex d-lg-none flex-wrap-reverse">
@@ -72,6 +71,8 @@
 
 
    <div class="row displayDesktop">
+
+       {% set Value = "" %}
        {#   <div class="col-12 col-lg-2 p-0 stichtingen" style="display: flex; flex-direction: column; flex-wrap: wrap;">
             <div class="d-flex m-auto py-4 iconsDesktop">
                   <a href="#"><img class="d-block m-auto" width="150px" src="{{ asset('build/images/logo.png') }}"></a>
@@ -136,7 +137,6 @@
 
             </div>
         </div>
-    </div>
     </div>
 
 {% endblock %}

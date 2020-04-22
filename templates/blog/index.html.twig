@@ -10,21 +10,20 @@
 <div class="container-fluid background py-5 contact-page">
     <div class="container aboutcontent h-100">
         <div class="contact-title">
-    <h1 style="font-size:48px;">Nieuwsberichten overzicht</h1>
+    <h1 style="font-size:32px;">Nieuwsberichten overzicht</h1>
         </div>
     <table class="table">
         <tbody>
         {% for blog in blogs %}
-            <tr style="color:white;">
-                <td><h5>{{ blog.title | raw }}</h5></td>
-                <td>{{ blog.summary | raw }}</td>
-                <td>
-                    <a href="{{ path('blog_show', {'id': blog.id}) }}">Lees het bericht</a>
-                </td>
-            </tr>
+                <br>
+                <h4 style="color:white">{{ blog.title | raw }}</h4>
+                <div style="color:white">{{ blog.summary | raw }}</div>
+
+                    <a style="color:#F8EF22;" href="{{ path('blog_show', {'id': blog.id}) }}">Lees verder</a><br>
+
         {% else %}
             <tr>
-                <td colspan="5">no records found</td>
+                <td colspan="5" >Geen berichten gevonden. Kom later terug</td>
             </tr>
         {% endfor %}
         </tbody>

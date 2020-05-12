@@ -27,16 +27,18 @@
     </div>
 </div>
 </header>
-    {% for Blog in blogs %}
+
+
 <section class="py-0 py-md-5">
   <div class="container">
 
 
-    <div class='row text-center'>
+    <div class='row text-center' >
        <div class='col-12 col-md py-5 p-md-0'>
-            <div class='row px-0 px-md-2'>
-                <div class='col-xl-2 col-12 my-4 my-md-0'><img src="{{ asset('build/images/Vector.png') }}"></div>
-                <div class='col-xl-10 col-12 blurbtitle text-center'>
+           {% for Blog in blogs %}
+            <div class='row px-0 px-md-2' style="width:50%;">
+                <div class='col-xl-2 col-12 my-4 my-md-0' id="preview_pic""><img src="{{ asset('build/images/Vector.png') }}"></div>
+                <div class='col-xl-10 col-12 blurbtitle text-center' style="width: 50%;">
                     {{ Blog.Title | raw }}
                   <br/>
                   <span class="blurbtext">
@@ -44,12 +46,12 @@
                   </span>
                     <a href="{{ path('blog_show', {'id': Blog.id}) }}" class="btn rounded-pill headerbutton">Lees verder</a>
                 </div>
+
             </div>
        </div>
     {% endfor %}
 
   </div>
-</div>
 
 </section>
 

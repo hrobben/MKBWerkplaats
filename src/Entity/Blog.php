@@ -50,7 +50,7 @@ class Blog
     public function setTitle(string $Title): self
     {
         $this->Title = $Title;
-        $this->created = new DateTime('now');
+        $this->created = new DateTime( 'now');
 
         return $this;
     }
@@ -67,7 +67,7 @@ class Blog
         return $this;
     }
 
-    public function __toString()
+    public function __toString() : string
     {
         return (string) $this->getTitle();
     }

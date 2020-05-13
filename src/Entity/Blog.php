@@ -23,12 +23,12 @@ class Blog
     private $Title;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text", nullable=false)
      */
     private $Text;
 
     /**
-     * @ORM\Column(type="text", nullable=false)
+     * @ORM\Column(type="datetime", nullable=false)
      */
     private $created;
 
@@ -50,7 +50,7 @@ class Blog
     public function setTitle(string $Title): self
     {
         $this->Title = $Title;
-        $this->created = new DateTime( 'now');
+        $this->created = new \DateTime( 'now');
 
         return $this;
     }
@@ -80,7 +80,7 @@ class Blog
     public function setCreated(\DateTimeInterface $created): self
     {
         $this->created = $created;
-        
+
 
         return $this;
     }

@@ -14,7 +14,7 @@
                 <h1>{{  blog.Title | raw }}</h1>
                 </div>
                 <hr />
-                <h6 class="lead py-0 py-md-3 aboutcontent text-white">{{ blog.Text | raw }}</h6>
+                <h6 class="lead py-0 py-md-3 aboutcontent text-white" id="blogtext">{{ blog.Text | raw }}</h6>
                 <a href="{{ path('blog_index') }}" class='text-white'>Terug naar overview</a>
         </div>
     </div>

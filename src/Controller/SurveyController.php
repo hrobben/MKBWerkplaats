@@ -7,6 +7,7 @@ use App\Entity\Question;
 use App\Form\SurveyType;
 use App\Repository\SurveyRepository;
 use App\Repository\QuestionRepository;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,6 +16,7 @@ use Symfony\Component\Security\Core\Security;
 
 /**
  * @Route("/survey")
+ * @IsGranted("ROLE_ADMIN")
  */
 class SurveyController extends AbstractController
 {

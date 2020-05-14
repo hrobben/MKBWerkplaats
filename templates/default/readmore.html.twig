@@ -11,7 +11,7 @@
     <div class="container-fluid background py-5 contact-page">
         <div class="container aboutcontent h-100">
             <div class="contact-title">
-                <h1>{{ read_more.title }}</h1>
+                <h1>{{ read_more.title }} {% if is_granted('ROLE_ADMIN') %}<a href="{{ path('read_more_edit', {'id': read_more.id}) }}"><button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button></a>{% endif %}</h1>
             </div>
             <hr />
 

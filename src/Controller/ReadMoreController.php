@@ -71,7 +71,7 @@ class ReadMoreController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('read_more_index');
+            return $this->redirectToRoute('home');
         }
 
         return $this->render('read_more/edit.html.twig', [

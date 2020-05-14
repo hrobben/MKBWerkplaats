@@ -37,8 +37,8 @@
        <div class='col-12 col-md py-5 p-md-0'>
            {% for Blog in blogs %}
             <div class='row px-0 px-md-2' style="width:50%;">
-                <div class='col-xl-2 col-12 my-4 my-md-0' id="preview_pic""><img src="{{ asset('build/images/Vector.png') }}"></div>
-                <div class='col-xl-10 col-12 blurbtitle text-center' style="width: 50%;">
+                <div class='col-xl-2 col-12 my-4 my-md-0' ><img class="preview_pic" src="{{ asset('build/images/Vector.png') }}"></div>
+                <div class='col-xl-10 col-12 blurbtitle text-center' >
                     {{ Blog.Title | raw }}
                   <br/>
                   <span class="blurbtext">
@@ -52,7 +52,7 @@
     {% endfor %}
 
   </div>
-
+  </div>
 </section>
 
 

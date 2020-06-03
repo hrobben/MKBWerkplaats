@@ -44,7 +44,7 @@
                   <span class="blurbtext">
                       {{ Blog.summary | raw }}
                   </span>
-                    <a href="{{ path('blog_show', {'id': Blog.id}) }}" class="btn rounded-pill headerbutton">Lees verder</a>
+                    <a href="{{ path('blog_show', {'id': Blog.id}) }}" class="btn rounded-pill headerbutton" style="margin-top:15px;">Lees verder</a>
                 </div>
 
             </div>
@@ -53,6 +53,9 @@
 
   </div>
   </div>
+    <div class="text-center" style="margin-top:25px; margin-bottom:25px;">
+    <a href="{{ path('blog_index') }}" class="btn rounded-pill headerbutton">Lees meer nieuwsberichten</a>
+    </div>
 </section>
 
 

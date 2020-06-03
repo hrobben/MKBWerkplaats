@@ -25,7 +25,7 @@ class DefaultController extends AbstractController
     public function index(BlogRepository $blogRepository): Response
     {
         return $this->render('default/index.html.twig', [
-            'blogs' => $blogRepository->findAll(),
+            'blogs' => $blogRepository->findBy([],['id'=>'DESC'],2,0),
         ]);
     }
 }

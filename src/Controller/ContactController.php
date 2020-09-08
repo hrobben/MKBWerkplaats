@@ -25,8 +25,8 @@ class ContactController extends AbstractController
                 dump($contactFormData);  // for debug info
             } else {
                 $message = (new \Swift_Message('You Got Mail from ' . $contactFormData['name']))
-                    ->setFrom($contactFormData['email'])
-                    ->setReplyTo($contactFormData['email'])
+                    ->setFrom($contactFormData['e-mail'])
+                    ->setReplyTo($contactFormData['e-mail'])
                     ->setTo($this->getParameter('mail_parameter'))
                     ->setBody(
                         $contactFormData['message'],
